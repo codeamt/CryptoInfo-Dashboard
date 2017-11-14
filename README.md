@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Coin compare
 
 ## Getting Started
@@ -34,3 +35,7 @@ you can deploy to staging and production with:
 
     % ./bin/deploy staging
     % ./bin/deploy production
+=======
+# CoinCompare
+Historical performance data on the most popular cryptocurrencies. 
+>>>>>>> 1d7131233b194b44c4e69aa82b140ecc18ab3777

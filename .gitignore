@@ -16,3 +16,5 @@
 /tags
 /tmp/*
 /yarn-error.log
+config/initializers/load_api_config.rb
+config/api_config.yml

@@ -24,6 +24,7 @@ gem "sprockets", ">= 3.0.0"
 gem "suspenders"
 gem "title"
 gem "uglifier"
+gem "rest-client"
 
 
 group :development do

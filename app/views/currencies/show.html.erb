@@ -1,7 +1,18 @@
-<h1>Coin Compare</h1>
 
-<%= link_to_if(params[:id], "Graph of #{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %>
+<div class="page-header">
+  <h1>Coin Compare</h1>
+</div>
 
-<a class='btn btn-primary' href=<%= currency_path('Bitcoin') %> role='button'>Bitcoin</a>
-<a class='btn btn-primary' href=<%=currency_path('Etherum') %> role='button'>Ethereum</a>
-<a class='btn btn-primary' href=<%=currency_path('Nasdaq') %> role='button'>Nasdaq</a>
+<% if params[:id] %>
+  <h3>Graph of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %></h3>
+<% else %>
+  <h3>Select a coin:</h3>
+<% end %>
+
+<div class="btn-toolbar" style="display:flex; margin-top: 15px">
+  <div style="margin: auto">
+    <a class='btn btn-default' href=<%= currency_path('Bitcoin') %> role='button'>Bitcoin</a>
+    <a class='btn btn-default' href=<%=currency_path('Etherum') %> role='button'>Ethereum</a>
+    <a class='btn btn-default' href=<%=currency_path('Nasdaq') %> role='button'>Nasdaq</a>
+  </div>
+</div>

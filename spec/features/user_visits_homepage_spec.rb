@@ -8,6 +8,6 @@ feature "User views homepage" do
 
   private
     def have_headline_text
-      have_text ("Coin Compare")
+      have_text ("CoinCompare")
     end
 end

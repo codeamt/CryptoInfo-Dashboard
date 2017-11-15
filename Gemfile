@@ -24,6 +24,11 @@ gem "sprockets", ">= 3.0.0"
 gem "suspenders"
 gem "title"
 gem "uglifier"
+gem "rest-client"
+gem "whenever", require: false
+gem "highcharts-rails"
+gem "chartkick"
+gem "groupdate"
 
 
 group :development do
@@ -43,6 +48,7 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.6"
+  gem "rails-controller-testing"
 end
 
 group :test do

@@ -1,18 +1,35 @@
-
-<div class="page-header">
-  <h1>Coin Compare</h1>
-</div>
+<h1>CoinCompare</h1>
+<small>Top Performing Cryptocurrencies</small>
+<hr>
 
 <% if params[:id] %>
-  <h3>Graph of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %></h3>
-<% else %>
-  <h3>Select a coin:</h3>
+  <div style="display:inline">
+  <h3> Historical Index of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %> </h3>
+  <small>Click the Link in the Coin Title to Learn More</small>
+  </div>
+  <div class="panel" style="display: inline; float: right">
+  <div class="panel-footer">Get A Price Prediction</div>
+  </div>
+
+  <hr>
+  <% else %>
+  <h3> Choose a coin: </h3>
 <% end %>
 
-<div class="btn-toolbar" style="display:flex; margin-top: 15px">
-  <div style="margin: auto">
-    <a class='btn btn-default' href=<%= currency_path('Bitcoin') %> role='button'>Bitcoin</a>
-    <a class='btn btn-default' href=<%=currency_path('Etherum') %> role='button'>Ethereum</a>
-    <a class='btn btn-default' href=<%=currency_path('Nasdaq') %> role='button'>Nasdaq</a>
+<%= line_chart @currencies %>
+
+
+<div class="btn-toolbar" style="display: flex; margin-top: 15px;">
+  <style>
+  .btn-default { margin-right:1em; }
+  </style>
+   <div style="margin: auto;">
+    <a class="btn btn-default" href=<%= currency_path('Bitcoin') %> role="button">Bitcoin | BTC</a>
+    <a class="btn btn-default" href=<%=currency_path('Ethereum') %> role="button">Ethereum | ETH</a>
+    <a class="btn btn-default" href=<%=currency_path('Bitcoin_Cash') %> role="button">Bitcoin Cash | BCH</a>
+    <a class="btn btn-default" href=<%=currency_path('Litecoin') %> role="button">Litecoin | LTC</a>
+    <a class="btn btn-default" href=<%=currency_path('ZCash') %> role="button">ZCash | ZEC</a>
+    <a class="btn btn-default" href=<%=currency_path('Monero') %> role="button">Monero | XMR</a>
+    <a class="btn btn-default" href=<%=currency_path('Nasdaq') %> role="button">Nasdaq | USD</a>
   </div>
 </div>

@@ -6,6 +6,10 @@ feature "User views chart links"  do
     expect(page).to have_link("Bitcoin")
     expect(page).to have_link("Ethereum")
     expect(page).to have_link("Nasdaq")
+    expect(page).to have_link("Bitcoin Cash")
+    expect(page).to have_link("Litecoin")
+    expect(page).to have_link("ZCash")
+    expect(page).to have_link("Monero")
   end
 end
 
@@ -22,6 +26,23 @@ feature "User views Wikipedia links of" do
   scenario "Nasdaq" do
     expect_page_to_have_link("Nasdaq")
   end
+
+  scenario "Bitcoin Cash" do
+    expect_page_to_have_link("Bitcoin Cash")
+  end
+
+  scenario "Litecoin" do
+    expect_page_to_have_link("Litecoin")
+  end
+
+  scenario "Zcash" do
+    expect_page_to_have_link("ZCash")
+  end
+
+  scenario "Monero" do
+    expect_page_to_have_link("Monero")
+  end
+
 end
 
   private

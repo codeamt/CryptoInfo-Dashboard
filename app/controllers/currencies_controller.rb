@@ -20,4 +20,4 @@ class CurrenciesController < ApplicationController
         new_element
       end
     end
-end
+  end

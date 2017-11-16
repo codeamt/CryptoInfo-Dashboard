@@ -42,6 +42,7 @@ feature "User views Wikipedia links of" do
   scenario "Monero" do
     expect_page_to_have_link("Monero")
   end
+
 end
 
   private

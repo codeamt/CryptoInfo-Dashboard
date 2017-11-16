@@ -12,8 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20171115004133) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "currencies", force: :cascade do |t|
     t.integer "currency_type"

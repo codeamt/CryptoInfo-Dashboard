@@ -6,7 +6,7 @@ namespace :currency  do
     include CurrencyClient
     begin
 
-      ['bitcoin', 'ethereum', 'nasdaq'].each do |currency|
+      ['bitcoin', 'ethereum', 'nasdaq', 'bitcoin_cash', 'litecoin', 'zcash', 'monero'].each do |currency|
         insert_new_recent_rows(CurrencyClient.send("get_#{currency}s"), "#{currency}")
       end
 

@@ -13,10 +13,19 @@
         bitcoins = CurrencyClient.get_bitcoins
         ethereums = CurrencyClient.get_ethereums
         nasdaqs = CurrencyClient.get_nasdaqs
+        bitcoin_cashes = CurrencyClient.get_bitcoin_cashes
+        litecoins = CurrencyClient.get_litecoins
+        zcashes = CurrencyClient.get_zcashes
+        moneros = CurrencyClient.get_moneros
+
 
         insert_currencies('bitcoin', bitcoins)
         insert_currencies('ethereum', ethereums)
         insert_currencies('nasdaq', nasdaqs)
+        insert_currencies('bitcoin_cash', bitcoin_cashes)
+        insert_currencies('litecoin', litecoins)
+        insert_currencies('zcash', zcashes)
+        insert_currencies('monero', moneros)
 
         puts "Yes! We've got the coin valies in the db now."
 

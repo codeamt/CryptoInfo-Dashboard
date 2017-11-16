@@ -7,6 +7,22 @@ module CurrencyClient
     get_currencies(APP_CONFIG.fetch('ethereum_api_url'))
   end
 
+  def self.get_bitcoin_cashes
+    get_currencies(APP_CONFIG.fetch('bitcoin_cash_api_url'))
+  end
+
+  def self.get_litecoins
+    get_currencies(APP_CONFIG.fetch('litecoin_api_url'))
+  end
+
+  def self.get_zcashes
+    get_currencies(APP_CONFIG.fetch('zcash_api_url'))
+  end
+
+  def self.get_moneros
+    get_currencies(APP_CONFIG.fetch('monero_api_url'))
+  end
+
   def self.get_nasdaqs
     json = get_json_response(APP_CONFIG.fetch('nasdaq_api_url'))
     values = json['seriess'].first['obs']

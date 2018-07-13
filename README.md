@@ -1,4 +1,4 @@
-# CoinCompare
+# PredictCrypt
 Historical performance data on the most popular cryptocurrencies built with Node.js and Ruby on Rails. Data is pulled from the [CryptoCompare API](https://www.cryptocompare.com/). 
 
 <p align="center">
